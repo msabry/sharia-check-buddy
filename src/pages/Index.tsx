@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -5,6 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, AlertCircle, HelpCircle, XCircle, FileText, Shield, ArrowRight } from "lucide-react";
 
 const Index = () => {
+  const navigate = useNavigate();
+  
   // Mock data for UI demonstration
   const complianceScore = {
     fullyCompliant: 80,
@@ -75,7 +78,7 @@ const Index = () => {
           <p className="text-xl text-muted-foreground mb-8">
             أداة مبتكرة تساعدك على فهم مدى توافق عقودك واستثماراتك مع الشريعة الإسلامية
           </p>
-          <Button size="lg" className="text-lg px-8">
+          <Button size="lg" className="text-lg px-8" onClick={() => navigate("/questionnaire")}>
             ابدأ الفحص الآن
             <ArrowRight className="mr-2 h-5 w-5" />
           </Button>
