@@ -112,9 +112,15 @@ const Questionnaire = () => {
       {/* Header */}
       <header className="border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center gap-2">
-            <Shield className="h-8 w-8 text-primary" />
-            <h1 className="text-2xl font-bold">ثروة - فاحص الشريعة</h1>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Shield className="h-8 w-8 text-primary" />
+              <h1 className="text-2xl font-bold">ثروة - فاحص الشريعة</h1>
+            </div>
+            <Button variant="outline" size="sm" onClick={() => navigate("/")}>
+              <ArrowRight className="h-4 w-4 ml-1" />
+              العودة للرئيسية
+            </Button>
           </div>
         </div>
       </header>
