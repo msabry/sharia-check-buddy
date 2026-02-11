@@ -217,12 +217,12 @@ const Index = () => {
         {/* Call to Action */}
         <Card className="mt-8 bg-primary/5 border-primary/20">
           <CardContent className="pt-6 text-center">
-            <h3 className="text-xl font-semibold mb-2">هل تريد تقريراً مفصلاً؟</h3>
+            <h3 className="text-xl font-semibold mb-2">هل تريد استشارة مخصصة؟</h3>
             <p className="text-muted-foreground mb-4">
-              احصل على تحليل شامل مع توصيات مخصصة وبدائل شرعية
+              تواصل مع أحد مستشارينا الشرعيين حسب احتياجك
             </p>
             <Button>
-              اطلب التقرير الكامل
+              تواصل مع مستشار شرعي الآن
               <FileText className="mr-2 h-4 w-4" />
             </Button>
           </CardContent>
