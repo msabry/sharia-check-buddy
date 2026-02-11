@@ -63,10 +63,16 @@ const Index = () => {
               <Shield className="h-8 w-8 text-primary" />
               <h1 className="text-2xl font-bold">ثروة - فاحص الشريعة</h1>
             </div>
-            <Button variant="outline">
-              <FileText className="ml-2 h-4 w-4" />
-              تقريري
-            </Button>
+            <div className="flex items-center gap-2">
+              <Button variant="outline" onClick={() => navigate("/admin")}>
+                <Shield className="ml-2 h-4 w-4" />
+                لوحة التحكم
+              </Button>
+              <Button variant="outline">
+                <FileText className="ml-2 h-4 w-4" />
+                تقريري
+              </Button>
+            </div>
           </div>
         </div>
       </header>
