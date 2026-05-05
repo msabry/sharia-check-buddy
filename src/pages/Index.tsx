@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, AlertCircle, HelpCircle, XCircle, FileText, Shield, ArrowRight } from "lucide-react";
+import { CheckCircle2, AlertCircle, HelpCircle, XCircle, FileText, Shield, ArrowRight, ClipboardList, MessageCircleQuestion } from "lucide-react";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -81,13 +81,48 @@ const Index = () => {
         {/* Hero Section */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">تحقق من التوافق الشرعي لمعاملاتك المالية</h2>
-          <p className="text-xl text-muted-foreground mb-8">
+          <p className="text-xl text-muted-foreground">
             أداة مبتكرة تساعدك على فهم مدى توافق عقودك واستثماراتك مع الشريعة الإسلامية
           </p>
-          <Button size="lg" className="text-lg px-8" onClick={() => navigate("/questionnaire")}>
-            ابدأ الفحص الآن
-            <ArrowRight className="mr-2 h-5 w-5" />
-          </Button>
+        </div>
+
+        {/* Two Main Services */}
+        <div className="grid gap-6 md:grid-cols-2 mb-12">
+          <Card className="border-2 hover:border-primary/50 transition-colors flex flex-col">
+            <CardHeader>
+              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+                <ClipboardList className="h-6 w-6 text-primary" />
+              </div>
+              <CardTitle className="text-2xl">املأ الاستبيان</CardTitle>
+              <CardDescription className="text-base">
+                احصل على تقرير مفصل بخصوص شرعية معاملاتك المالية بعد الإجابة على مجموعة من الأسئلة
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="mt-auto">
+              <Button size="lg" className="w-full" onClick={() => navigate("/questionnaire")}>
+                ابدأ الاستبيان الآن
+                <ArrowRight className="mr-2 h-5 w-5" />
+              </Button>
+            </CardContent>
+          </Card>
+
+          <Card className="border-2 hover:border-primary/50 transition-colors flex flex-col">
+            <CardHeader>
+              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-3">
+                <MessageCircleQuestion className="h-6 w-6 text-primary" />
+              </div>
+              <CardTitle className="text-2xl">لديك سؤال؟ اسأل مشير</CardTitle>
+              <CardDescription className="text-base">
+                اطرح سؤالك مباشرة على مستشارك الذكي واحصل على إجابة فورية حول معاملاتك المالية
+              </CardDescription>
+            </CardHeader>
+            <CardContent className="mt-auto">
+              <Button size="lg" variant="secondary" className="w-full" onClick={() => navigate("/ask")}>
+                اسأل مشير الآن
+                <ArrowRight className="mr-2 h-5 w-5" />
+              </Button>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Compliance Overview - Mock Results */}
