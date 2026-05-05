@@ -130,7 +130,7 @@ const Index = () => {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Shield className="h-5 w-5 text-primary" />
-              نظرة عامة على التوافق الشرعي
+              ما شكل التقرير الذي سأحصل عليه بعد ملأ الاستبيان؟
             </CardTitle>
             <CardDescription>تحليل شامل لعقودك المالية الحالية</CardDescription>
           </CardHeader>
