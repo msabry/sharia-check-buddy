@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle2, AlertCircle, HelpCircle, XCircle, FileText, Shield, ArrowRight, ClipboardList, MessageCircleQuestion } from "lucide-react";
+import { CheckCircle2, AlertCircle, HelpCircle, XCircle, FileText, Shield, ArrowRight, ClipboardList, MessageCircleQuestion, MessageSquareText } from "lucide-react";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -71,6 +71,11 @@ const Index = () => {
               <Button variant="outline">
                 <FileText className="ml-2 h-4 w-4" />
                 تقريري
+              </Button>
+              {/* TODO: link to the "get a consultation" page once its URL is ready */}
+              <Button variant="outline">
+                <MessageSquareText className="ml-2 h-4 w-4" />
+                احصل على استشارة
               </Button>
             </div>
           </div>
